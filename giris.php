@@ -29,7 +29,7 @@ if (isset($_SESSION['girisAd']) && isset($_SESSION['girisHash']) && isset($_SESS
 	$kullaniciTemp=kullaniciGetir($_SESSION['girisAd']);
 	if ($kullaniciTemp!=false) {
 		$hash=girisHashOlustur($_SESSION['girisAd'],$kullaniciTemp->sifre,$_SESSION['girisZaman']);
-		if ($_SESSION['girisAd']==$hash) {
+		if ($_SESSION['girisHash']==$hash) {
 			$giris=$kullaniciTemp;
 			unset($giris->sifre); //arayuze sifreyi gondermeye gerek yok 
 			unset($kullaniciTemp); //degiskeni bosaltalim cakisma olmasin
