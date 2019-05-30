@@ -33,6 +33,7 @@ if (isset($_SESSION['girisAd']) && isset($_SESSION['girisHash']) && isset($_SESS
 			$giris=$kullaniciTemp;
 			unset($giris->sifre); //arayuze sifreyi gondermeye gerek yok 
 			unset($kullaniciTemp); //degiskeni bosaltalim cakisma olmasin
+			header('Location: ?'); //kendine geri yonlendir ki sayfayi yenileyince tekrar giris bilgierini post etmesin
 		}
 	}
 }
